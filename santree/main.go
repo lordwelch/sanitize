@@ -28,7 +28,7 @@ func main() {
 		if path != filepath.Join(newpath, filename) {
 			fmt.Println(path, "->", filepath.Join(newpath, filename))
 			os.MkdirAll(newpath, os.ModePerm)
-			os.Rename(path, filepath.Join(newpath, info.Name()))
+			fmt.Println(os.Rename(path, filepath.Join(newpath, filename)))
 		}
 		if !(strings.HasPrefix(path, previousDir) || previousDir == "./") {
 			rmpath := previousDir

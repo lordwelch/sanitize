@@ -20,7 +20,7 @@ func SanitizeFilename(filename string) string {
 	filename = strings.TrimLeft(filename, " -~")
 	filename = strings.TrimSpace(filename)
 	filename = strings.Replace(filename, " ", "_", -1)
-	filename = strings.Replace(filename, "_-_", "", -1)
+	filename = strings.Replace(filename, "_-_", "-", -1)
 	var (
 		st   strings.Builder
 		prev rune
